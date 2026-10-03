@@ -1,0 +1,7 @@
+app = "spoonful"
+
+[http_service]
+  internal_port = 80
+  force_https = true
+  auto_stop_machines = "stop"
+  auto_start_machines = true
