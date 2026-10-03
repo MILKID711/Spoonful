@@ -1,8 +1,7 @@
-FROM node:20-alpine
-WORKDIR /app
-COPY package.json server.js ./
-COPY public ./public
-ENV NODE_ENV=production
-EXPOSE 3000
-USER node
-CMD ["node", "server.js"]
+FROM nginx:alpine
+
+COPY Spoonful.html /usr/share/nginx/html/index.html
+
+EXPOSE 80
+
+CMD ["nginx", "-g", "daemon off;"]
